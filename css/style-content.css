@@ -1,0 +1,316 @@
+@charset "utf-8";
+/* CSS Document */
+
+.content	{
+		width:100%;
+		min-width:1200px;
+		min-height:1190px;
+		position:relative;
+		margin:0 auto;
+		background:url('images/bg.jpg') repeat;
+		color:#001d44;
+	}
+		#content-news	{
+			width:620px;
+			height:500px;
+			background-color:#e4e4e4;
+			float:left;
+			margin-top:50px;
+			margin-bottom:50px;
+			margin-left:120px;
+			position:relative;
+		}
+			#news-nav	{
+				height:50px;
+				width:620px;
+				background-color:#e4e4e4;
+				border:none;
+				position:relative;
+			}
+				#news-nav-news, #news-nav-evt:hover, #news-nav-col:hover, #news-nav-tips:hover, #news-nav-campus:hover	{
+					float:left;
+					position:relative;
+					height:50px;
+					width:80px;
+					font-family:BebasNeue;
+					font-size:20px;
+					color:#001d44;
+					line-height:50px;
+					text-align:center;
+					background-color:#FFFFFF;
+					border-left-color:#c7c7c7;
+					border-left-style:solid;
+					border-left-width:1px;
+					border-right-color:#c7c7c7;
+					border-right-style:solid;
+					border-right-width:1px;
+					border-top-color:#c7c7c7;
+					border-top-style:solid;
+					border-top-width:1px;
+					border-bottom-color:#FFFFFF;
+					border-bottom-style:solid;
+					border-bottom-width:1px;
+					z-index:15;
+					cursor:hand;
+					cursor:pointer;
+				}
+				#news-nav-evt, #news-nav-col, #news-nav-tips, #news-nav-campus	{
+					float:left;
+					position:relative;
+					height:50px;
+					width:80px;
+					font-family:BebasNeue;
+					font-size:20px;
+					color:#001d44;
+					line-height:50px;
+					text-align:center;
+				}
+				#news-nav-tips, #news-nav-tips:hover, #news-nav-campus, #news-nav-campus:hover	{
+					width:140px;
+				}
+			#news-fill	{
+				width:618px;
+				height:448px;
+				background-color:#FFFFFF;
+				border:1px solid #c7c7c7;
+				font-family:Calibri;
+				font-size:14px;
+				font-weight:bold;
+				position:relative;
+			}
+				#news-fill-1	{
+					position:relative;
+					width:580px;
+					height:260px;
+					margin-left:19px;
+					margin-top:19px;
+					vertical-align:top;
+					line-height:20px;
+					display:inline-block;
+				}
+					#news-fill-1 p	{
+						text-align:justify;
+					}
+				#news-fill-1-more	{
+					position:relative;
+					float:right;
+					margin-right:19px;
+					color:#aaaaaa;
+					font-style:italic;
+				}
+				#news-fill-2	{
+					float:left;
+					position:relative;
+					width:580px;
+					height:120px;
+					margin-left:19px;
+					margin-top:19px;
+					vertical-align:middle;
+				}
+					#news-fill-2-thumb	{
+						float:left;
+						position:relative;
+						width:480px;
+						height:120px;
+						margin-left:25px;
+						margin-right:25px;
+						background-color:#CCC;
+					}
+					#news-thumb-left, #news-thumb-right	{
+						float:left; 
+						position:relative; 
+						top:50%; 
+						margin-top:-35px;
+						width:25px;
+						height:71px;
+					}
+					#news-thumb-left	{
+						background-image:url('images/arrow_putih.png');
+					}
+						#news-thumb-left:hover	{
+							background-image:url('images/arrow.png');
+							cursor:pointer;
+							cursor:hand;
+						}
+					#news-thumb-right	{
+						background-image:url('images/arrow_putih_r.png');
+					}
+						#news-thumb-right:hover	{
+							background-image:url('images/arrow_r.png');
+							cursor:pointer;
+							cursor:hand;
+						}
+					
+					.news-thumb	{
+						position:relative;
+						float:left;
+						width:160px;
+						height:120px;
+						background-color:#999;
+						border:0px solid #999;
+					}
+						.news-thumb-img, .news-thumb-dim	{
+							position:relative;
+							float:left;
+							width:160px;
+							height:80px;
+						}
+						.news-thumb-dim	{
+							background:url('images/news-dim.png');
+						}
+						.news-thumb-title	{
+							position:relative;
+							float:left;
+							clear:both;
+							width:156px;
+							height:36px;
+							background-color:#0149ab;
+							color:white;
+							text-align:center;
+							vertical-align:middle;
+							font-family:Calibri;
+							font-size:12px;
+							padding:2px;
+						}
+							.news-thumb-titlehover	{
+								background-color:#003173;
+							}
+						
+					
+		#content-companies	{
+			width:300px;
+			min-height:700px;
+			background-color:#e1dbdb;
+			float:right;
+			position:relative;
+			margin-right:120px;
+			margin-top:50px;		
+		}
+			#content-companies-title	{
+				font-family:"BebasNeue";
+				font-size:28px;
+				padding:10px;
+			}
+			
+			.companies	{
+				background-color:#FFFFFF;
+				width:80px;
+				height:80px;
+				position:relative;
+				float:left;
+				border:10px solid #e1dbdb;
+			}
+			.companies img	{
+				display:block;
+				width:80px;
+				position:absolute;
+				top:0;
+				bottom:0;
+				left:0;
+				right:0;
+				margin:auto;
+			}
+		
+		#content-latestjobs	{
+			width:620px;
+			height:500px;
+			background-color:#e4e4e4;
+			float:left;
+			margin-top:50px;
+			margin-left:120px;
+			position:relative;
+		}
+			#content-latestjobs-title	{
+				margin-top:20px;
+				margin-left:20px;
+				font-family:"BebasNeue";
+			}
+			#content-latestjobs-listing	{
+				width:616px;
+				height:436px;
+				background-color:#FFFFFF;
+				border:2px solid #e4e4e4;
+			}
+			#latestjobs-container	{
+				position:relative;
+				float:left;
+				left:50%;
+				margin-left:-300px;
+				top:50%;
+				margin-top:-210px;
+			}
+				#content-latestjobs-category	{
+					height:420px;
+					width:200px;
+					overflow-y:scroll;
+					overflow-x:hidden;
+					float:left;
+				}
+				.content-latestjobs-ctg	{
+					font-family:Calibri;
+					font-size:14px;
+					font-weight:bold;
+					line-height:48px;
+					min-height:48px;
+					width:178px;
+					float:left;
+					position:relative;
+					padding-left:5px;
+					border:1px solid #e1dbdb;
+				}
+				#content-latestjobs-list	{
+					height:420px;
+					width:400px;
+					overflow-y:scroll;
+					overflow-x:hidden;
+					float:left;
+				}
+					.content-latestjobs-joblist	{
+						font-family:Calibri;
+						font-size:14px;
+						font-weight:bold;
+						min-height:48px;
+						width:361px;
+						float:left;
+						position:relative;
+						padding:10px;
+						border:1px solid #e1dbdb;
+					}
+						.joblist-btn-apply	{
+							border:none;
+							border-radius:5px 5px;
+							color:white;
+							background-color:#003173;
+							position:absolute;
+							right:0%;
+							margin-right:10px;
+							float:right;
+						}
+						.latestjobs-joblist-title	{
+							font-family:"BebasNeue";
+							font-size:24px;
+							font-weight:lighter;
+							padding:0px 0px 10px 0px;
+						}
+						.latestjobs-joblist-content	{
+							
+						}
+						.latestjobs-joblist-content-kriteria	{
+							float:left;
+							width:50px;
+							/*padding:0 5px 0 5px;*/
+							border-bottom:2px solid #aa2d2d;
+						}
+						.latestjobs-joblist-content-isikriteria	{
+							width:250px;
+							float:left;
+							margin-left:10px;
+						}
+						.latestjobs-joblist-content-isikriteria div	{
+							position:relative;
+							float:left;
+							clear:both;
+							padding:0 5px 0 5px;
+							border:2px solid #abcefe;
+							margin-bottom:5px;
+						}

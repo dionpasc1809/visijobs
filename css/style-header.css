@@ -1,0 +1,248 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body	{
+	margin: 0px;
+    padding: 0px;
+	position:relative;
+}
+
+#container	{
+	z-index:10;
+	min-width:1200px;
+	width:100%;
+	margin:0 auto;
+	display:inline;
+    padding: 0px;
+	/*
+	position:relative;
+	left:50%;
+	margin-left:-600px;*/
+}
+
+	.header	{
+		min-width:1180px;
+		width:100%;
+		height:40px;
+		position:fixed;
+		top:0;
+		left:0;
+		z-index:90;
+		margin:0 auto;
+		background-color:#e4e4e4;
+		color:#003173;
+		vertical-align:middle;
+	}
+	
+	#header-menu	{
+		float:right;
+		margin-right:120px;
+		margin-top:5px;
+		font-family:Calibri;
+		position:relative;
+	}
+		#btn_signup	{
+			font-family:"BebasNeue";
+			letter-spacing:1px;
+			font-size:24px;
+			border-radius:2px 2px;
+			border:none;
+			height:30px;
+			margin-left:10px;
+			background-color:#ec2427;
+			color:#FFFFFF;
+			cursor:hand;
+			cursor:pointer;
+		}
+			#popup_signup	{
+				display:none;
+				font-family:'Calibri';
+				font-size:14px;
+				color:#FFFFFF;
+				text-align:center;
+				position:absolute;
+				left:800px;
+				top:55px;
+				width:300px;
+				height:240px;
+				background-color:rgba(0,0,0,0.8);
+				border-radius:5px 5px;
+				z-index:50;
+				padding:5px;				
+			}
+				#popup_signup-trianglepoint	{
+					position:absolute;
+					background:url(images/black_triangle_icon.png) no-repeat center;
+					width:15px;
+					height:8px;
+					top:-8px;
+					right:125px;
+				}
+				#popup_signup-title	{
+					margin-top:10px;
+					position:relative;
+					float:left;
+					margin-left:18px;
+					font-family:'BebasNeue';
+				}
+				#popup_signup-form	{
+					text-align:left;
+					margin-left:18px;
+					position:relative;
+					float:left;
+					clear:both;
+				}
+				#popup_signup-form-agree	{
+					text-align:left;
+					float:left;
+					clear:both;
+				}
+					#popup_signup-form-agree [type="checkbox"]	{
+						border:2px solid rgba(183,22,27,0.8);
+						box-sizing:none;
+					}
+				.signup_btn	{
+					font-family:'Calibri';
+					font-size:14px;
+					color:#FFFFFF;
+					background-color:rgba(183,22,27,0.5);
+					position:relative;
+					float:right;
+					width:100px;
+					height:30px;
+					border:none;
+					margin-top:10px;
+					margin-right:28px;
+					cursor:hand;
+					cursor:pointer;
+				}
+					#btn_red_submit{
+						background-color:rgba(183,22,27,1);
+						color:#FFFFFF;
+						float:left;
+						margin-right:0px;
+						margin-left:10px;
+					}
+				.signup_form	{
+					font-family:'RailwayRegular';
+					font-size:14px;
+					padding:5px;
+					color:rgba(183,22,27,0.8);
+					float:left;
+					margin-top:10px;
+					position:relative;
+					clear:both;
+					border:1px solid rgba(183,22,27,0.8);
+				}
+				
+				.exit_popup_button	{
+					background:url(images/x.png) no-repeat center;
+					position:absolute;
+					width:40px;
+					height:40px;
+					right:-20px;
+					top:-20px;
+					cursor:hand;
+					cursor:pointer;
+				}
+					#popup_signup-employer	{
+						float:right;
+						clear:both;
+						position:relative;
+						margin-right:18px;
+						margin-top:10px;
+						background-color:rgba(0,0,0,1);
+						box-shadow:0px 0px 5px 1px rgba(255,255,255,0.5);
+						-webkit-box-shadow:0px 0px 5px 1px rgba(255,255,255,0.5); 
+						-moz-box-shadow:0px 0px 5px 1px rgba(255,255,255,0.5);
+						-o-box-shadow:0px 0px 5px 1px rgba(255,255,255,0.5);
+						-ms-box-shadow:0px 0px 5px 1px rgba(255,255,255,0.5);
+						padding:0 5px 0 5px;
+						font-family:'RailwayRegular';
+						font-size:12px;
+					}
+						#popup_signup-employer a	{
+							color:#aea5a6;
+							text-decoration:none;
+						}
+				
+				
+			#popup_login	{
+				display:none;
+				font-family:'Calibri';
+				font-size:14px;
+				color:#FFFFFF;
+				text-align:center;
+				position:absolute;
+				left:920px;
+				top:55px;
+				width:250px;
+				height:210px;
+				background-color:rgba(0,0,0,0.8);
+				border-radius:5px 5px;
+				z-index:50;
+				padding:5px;
+			}
+				#popup_login-title	{
+					margin-top:5px;
+					float:left;
+					clear:both;
+					margin-left:18px;
+					font-family:'BebasNeue';
+				}
+				#popup_login-form	{
+					text-align:left;
+					margin-left:18px;
+				}
+				#popup_login-remember	{
+					text-align:left;
+					margin-left:18px;
+					margin-top:5px;
+					float:left;
+					clear:both;
+				}
+				#popup_login-signupbtn{
+					margin-left:-31px;
+					background-color:rgba(183,22,27,1);
+					position:relative;
+					float:right;
+					width:100px;
+					height:30px;
+					color:#FFFFFF;
+					border:none;
+					margin-top:10px;
+					margin-right:18px;
+					cursor:hand;
+					cursor:pointer;
+					clear:both;
+				}
+				#popup_login-trianglepoint	{
+					position:absolute;
+					background:url(images/black_triangle_icon.png) no-repeat center;
+					width:15px;
+					height:8px;
+					top:-8px;
+					right:125px;
+				}
+				#login-lupapass	{
+					position:relative;
+					float:right;
+					clear:both;
+					margin-right:18px;
+					margin-top:5px;
+				}
+					#login-lupapass a	{
+						color:#FFFFFF;
+						text-decoration:underline;
+					}
+		
+		#btn_login	{
+			font-family:"BebasNeue";
+			font-size:24px;
+			border-radius:2px 2px;
+			border:none;
+			height:30px;
+			margin-left:10px;
+			cursor:hand;
+			cursor:pointer;
+		}

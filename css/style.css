@@ -1,0 +1,960 @@
+@charset "utf-8";
+/* CSS Document */
+html, body	{
+	margin: 0px;
+    padding: 0px;
+	position:relative;
+}
+
+#cover	{
+	position:absolute;
+	z-index:0;
+	width:100%;
+}
+	#cover div	{
+		width:100%;
+	}
+	.sm1	{
+		position:relative;
+		height:160px;
+		float:left;
+		background-color:#ec2427;
+	}
+	.sm2	{
+		position:relative;
+		height:160px;
+		float:left;		
+		background-color:#b7161b;
+	}
+	.cg1	{
+		width:100%;
+		height:70px;
+		background-color:#2b2b2b;
+		position:relative;
+	}
+	.ft1	{
+		position:relative;
+		float:left;
+		width:100%;
+		height:250px;
+		background-color:#ec2427;
+	}
+	.ft2	{
+		position:relative;
+		float:left;
+		width:100%;
+		height:110px;
+		background-color:#181818;
+	}
+
+#container	{
+	z-index:10;
+	min-width:1200px;
+	width:100%;
+	margin:0 auto;
+	display:inline;
+    padding: 0px;
+	/*
+	position:relative;
+	left:50%;
+	margin-left:-600px;*/
+}
+
+	.header	{
+		min-width:1180px;
+		width:100%;
+		height:40px;
+		position:relative;
+		margin:0 auto;
+		background-color:#181818;
+		color:#d4d4d4;
+		vertical-align:middle;
+	}
+	
+	#header-menu	{
+		float:right;
+		margin-right:120px;
+		margin-top:5px;
+		font-family:Calibri;
+		position:relative;
+	}
+		#btn_signup	{
+			font-family:"BebasNeue";
+			letter-spacing:1px;
+			font-size:24px;
+			border-radius:2px 2px;
+			border:none;
+			height:30px;
+			margin-left:10px;
+			background-color:#ec2427;
+			color:#FFFFFF;
+		}
+			#popup_signup	{
+				display:none;
+				font-family:'Calibri';
+				font-size:14px;
+				color:#181818;
+				text-align:center;
+				position:absolute;
+				left:700px;
+				top:40px;
+				width:300px;
+				height:260px;
+				background-color:white;
+				border:solid 2px #181818;
+				border-radius:0px 0px 5px 5px;
+				border-top:none;
+				z-index:50;
+				padding:5px;
+			}
+				.signup_btn	{
+					font-family:'BebasNeue';
+					font-size:24px;
+					color:#181818;
+					position:relative;
+					float:left;
+					left:50%;
+					border-radius:5px 5px;
+					letter-spacing:1px;
+					margin-top:10px;
+				}
+				.signup_form	{
+					font-family:'RailwayRegular';
+					font-size:14px;
+					color:#181818;
+					float:left;
+					margin-top:10px;
+					position:relative;
+					clear:both;
+				}
+				.exit_popup_button	{
+					float:right;
+					background-color:#b7161b;
+					color:#FFFFFF;
+				}
+			#popup_login	{
+				display:none;
+				font-family:'Calibri';
+				font-size:14px;
+				color:#181818;
+				text-align:center;
+				position:absolute;
+				left:760px;
+				top:40px;
+				width:300px;
+				height:220px;
+				background-color:white;
+				border:solid 2px #181818;
+				border-radius:0px 0px 5px 5px;
+				border-top:none;
+				z-index:50;
+				padding:5px;
+			}
+				#login-lupapass	{
+					position:relative;
+					float:right;
+					clear:both;
+					margin-right:18px;
+				}
+		
+		#btn_login	{
+			font-family:"BebasNeue";
+			font-size:24px;
+			border-radius:2px 2px;
+			border:none;
+			height:30px;
+			margin-left:10px;
+		}
+	
+	.logo	{
+		min-width:1200px;
+		width:100%;
+		height:120px;
+		vertical-align:middle;
+		margin:0 auto;
+		position:relative;
+		clear:both;
+	}
+		#thumb-logo	{
+			background:url('images/visijobs-logo.png') no-repeat center center;
+			width:285px;
+			height:120px;
+			margin-left:120px;
+			position:relative;
+		}
+	
+	.searchmenu	{
+		min-width:1200px;
+		width:100%;
+		height:160px;
+		margin:0 auto;
+		clear:both; 
+		background-position:center; 
+		background-repeat:no-repeat;
+		position:relative;
+	}
+		#searchmenu-1	{
+			width:700px;
+			height:160px;
+			float:left;
+			background-color:#ec2427;
+			color:white;
+			position:relative;
+		}
+			#sm1-title	{
+				margin-left:120px;
+				font-size:32px;
+				font-family:'BebasNeue';
+				margin-top:20px;
+			}
+			#sm1-search	{
+				margin-left:120px;
+			}
+				#sm1-searchbar	{
+					height:20px;
+					width:440px;
+					border:none;
+					padding:5px;
+					font-family:'RailwayRegular';
+				}
+				#sm1-searchbtn	{
+					height:30px;
+					width:100px;
+					color:white;
+					background-color:#181818;
+					border:none;
+					margin-left:-4px;
+					font-family:'RailwayRegular';
+				}
+					#sm1-searchbtn:hover	{
+						background-color:#2b2b2b;
+					}
+			#sm1-menu	{
+				margin-left:120px;
+			}
+				#sm1-categories, #sm1-location	{
+					background-color:transparent;
+					position:relative;
+					float:left;
+					padding:5px;
+					font-family:Calibri;
+					margin-top:10px;
+					margin-right:20px;/*
+					border:2px solid #b7161b;
+					border-radius:0px 0px 5px 5px;
+					background-color:#b7161b;*/
+					cursor:pointer;
+					cursor:hand;
+				}
+					#sm1-categories:hover, #sm1-location:hover	{
+						border:0px solid #b7161b;
+						border-radius:0px 0px 5px 5px;
+						background-color:#b7161b;
+						cursor:pointer;
+						cursor:hand;
+					}
+					.sm1-hover	{
+						border:0px solid #b7161b !important;
+						border-radius:0px 0px 5px 5px !important;
+						background-color:#b7161b !important;
+						cursor:pointer !important;
+						cursor:hand !important;
+						z-index:35 !important;
+					}
+				#popup_cat	{
+					font-family:Calibri;
+					font-size:14px;
+					line-height:20px;
+					position:absolute;
+					width:500px;
+					height:250px;
+					top:122px;
+					left:120px;
+					border:1px solid #b7161b;
+					border-radius:0px 0px 5px 5px;
+					background-color:#FFFFFF;
+					z-index:30;
+					padding:10px;
+				}
+					#popup_cat-super	{
+						width:198px;
+						position:relative;
+						float:left;
+						height:250px;
+						overflow-y:scroll;
+						border:1px solid #b7161b;
+						border-radius:5px;
+					}
+						.popup_cat-super-thumb	{
+							color:#181818;
+							position:relative;
+							float:left;
+							width:176px;
+							height:30px;
+							line-height:30px;
+							padding-left:5px;
+							border:1px solid #e4e4e4;
+							border-left:none;
+							border-right:none;
+						}
+					#popup_cat-sub	{
+						color:#181818;
+						width:288px;
+						position:relative;
+						float:left;
+						margin-left:10px;
+						height:250px;
+						overflow-y:scroll;
+						border:1px solid #b7161b;
+						border-radius:5px;
+					}
+						#popup_cat-exit	{
+							position:absolute;
+							right:0;
+							margin-top:-37px;
+							margin-right:-1px;
+							background-color:#FFFFFF;
+							border:1px solid #b7161b;
+							border-bottom:none;
+							border-radius:5px 5px 0 0;
+						}
+						.popup_cat-sub-title	{
+							font-size:24px;
+							font-weight:bold;
+							height:40px;
+							line-height:40px;
+							padding-left:10px;
+						}
+						.popup_cat-sub-select	{
+							padding-left:5px;
+							margin-bottom:10px;
+						}
+						.popup_cat-sub-selectallbtn	{
+							background-color:#e4e4e4;
+							color:#181818;
+							border-radius:5px;
+							border-color:#FFFFFF;
+							font-family:"Calibri";
+							font-weight:bold;
+							margin-right:10px;
+						}
+						.popup_cat-sub-1	{
+							position:relative;
+							float:left;
+							width:125px;
+							margin-left:5px;
+							min-height:150px;
+						}
+						.popup_cat-sub-2	{
+							position:relative;
+							float:right;
+							width:125px;
+							margin-right:5px;
+							min-height:150px;
+						}
+					
+			#sm1-more	{
+				float:right;
+				clear:both;
+				font-family:Calibri;
+				margin-right:10px;
+				margin-top:10px;
+			}
+		#searchmenu-2	{
+			width:500px;
+			height:160px;
+			float:left;
+			background-color:#b7161b;
+			color:white;
+			position:relative;
+		}
+			#sm2-buatjobalert	{
+				position:relative;
+				float:left;
+				left:75px;
+				top:40px;
+				border:1px solid #FFFFFF;
+				width:120px;
+				height:80px;
+				padding:5px;
+				text-align:center;
+				font-family: 'Calibri';
+				font-size:14px;
+				/*letter-spacing:1px;*/
+			}
+				#sm2-buatjobalert:hover	{
+					background-color:#ec2427;
+				}
+			#sm2-buatcv	{
+				position:relative;
+				float:left;
+				left:100px;
+				top:40px;
+				border:1px solid #FFFFFF;
+				width:120px;
+				height:80px;
+				padding:5px;
+				text-align:center;
+				font-family: 'Calibri';
+				font-size:14px;
+				/*letter-spacing:1px;*/
+			}
+				#sm2-buatcv:hover	{
+					background-color:#ec2427;
+				}
+			/*.sm2-hline	{
+				margin-top:30px;
+			}
+			#sm2-title	{
+				background-color:#b7161b;
+				padding:5px;
+				margin-top:-24px;
+				margin-left:130px;
+				position:relative;
+				float:left;
+				z-index:20;
+				font-family: 'RailwayRegular';
+					font-size:14px;
+			}*/
+				#tab-jobseeker	{
+					position:relative;
+					margin-left:60px;
+					margin-top:-40px;
+					width:160px;
+					height:40px;
+					background-color:#ec2427;
+					text-align:center;
+					line-height:40px;
+					font-family: 'RailwayRegular';
+					font-size:14px;
+					letter-spacing:1px;
+				}
+					#tab-jobseeker:hover	{
+						width:150px;
+						height:30px;
+						line-height:30px;
+						border:5px solid #ec2427;
+						background-color:#b7161b;
+						cursor:pointer;
+						cursor:hand;
+					}
+				#tab-employer	{
+					position:relative;
+					margin-left:220px;
+					margin-top:-40px;
+					width:160px;
+					height:40px;
+					background-color:#d6d6f2;
+					color:#1c226e;
+					text-align:center;
+					line-height:40px;
+					font-family: 'RailwayRegular';
+					font-size:14px;
+					letter-spacing:1px;
+				}
+					#tab-employer:hover	{
+						width:150px;
+						height:30px;
+						line-height:30px;
+						border:5px solid #d6d6f2;
+						background-color:#FFFFFF;
+						cursor:pointer;
+						cursor:hand;
+					}
+				/*#stat-jobseeker, #stat-employer, #stat-joblisting	{
+					float:left;
+					position:relative;
+					width:100px;
+					text-align:center;
+					margin-left:20px;
+					margin-top:30px;
+					font-size:28px;
+					font-family:'BebasNeue';
+				}
+				#stat-jobseeker	{
+					clear:both;
+				}
+				#label-jobseeker	{
+					clear:both;
+				}
+				#label-jobseeker, #label-employer, #label-joblisting	{
+					float:left;
+					position:relative;
+					width:100px;
+					text-align:center;
+					margin-left:20px;
+					font-family: 'RailwayRegular';
+					font-size:14px;
+				}*/
+				
+	.category	{
+		min-width:1200px;
+		width:100%;
+		height:380px;
+		background-color:#181818;
+		margin:0 auto;
+		clear:both;
+		color:#d4d4d4;
+		position:relative;
+	}
+		#category-1	{
+			width:100%;
+			min-width:1200px;
+			height:70px;
+			background-color:#2b2b2b;
+			vertical-align:middle;
+			position:relative;
+		}
+			#category-1-title	{
+				margin-left:120px;
+				width:300px;
+				float:left;
+				position:relative;
+				font-family:Calibri;
+				font-size:24px;
+				font-weight:bold;
+				margin-top:5px;
+				letter-spacing:1px;
+			}
+			
+			#category-1-cat, #category-1-ind, #category-1-loc	{
+				width:160px;
+				height:70px;
+				float:left;
+				position:relative;
+				font-family:Calibri;
+				font-size:22px;
+				line-height:70px;
+				text-align:center;
+				letter-spacing:1px;
+			}
+				#category-1-cat:hover, #category-1-ind:hover, #category-1-loc:hover	{
+					position:relative;
+					background-color:#181818;
+					z-index:20;
+					border-bottom-style:solid;
+					border-bottom-width:2px;
+					border-bottom-color:#ec2426;
+					cursor:pointer;
+					cursor:hand;
+				}
+			#category-1-cat	{
+				position:relative;
+				background-color:#181818;
+				z-index:20;
+				border-bottom-style:solid;
+				border-bottom-width:2px;
+				border-bottom-color:#ec2426;
+			}
+			
+		#category-2	{
+			width:100%;
+			min-width:1200px;
+			height:310px;
+			position:relative;
+		}
+			#category-2-1	{
+				float:left;
+				height:310px;
+				width:320px;
+				margin-left:120px;
+				clear:both;
+			}
+			#category-2-1, #category-2-2, #category-2-3	{
+				float:left;
+				height:298px;
+				width:320px;
+				font-family:Calibri;
+				line-height:28px;
+				font-size:18px;
+				margin-top:10px;
+			}
+				#category-2-1 a, #category-2-2 a, #category-2-3 a	{
+					color:white;
+					text-decoration:none;
+				}
+			#category-2-more	{
+				float:right;
+				right:0%;
+				position:absolute;
+				font-family:Calibri;
+				line-height:28px;
+				font-size:12px;
+				margin-top:280px;
+				margin-right:120px;
+			}
+		
+		
+	.category-line	{
+		position:absolute;
+		z-index:15;
+		left:0;
+		right:0;
+		margin-top:62px;
+	}
+	
+	.content	{
+		width:100%;
+		min-width:1200px;
+		min-height:1190px;
+		position:relative;
+		margin:0 auto;
+		background:url('images/bg.jpg') repeat;
+	}
+		#content-news	{
+			width:620px;
+			height:500px;
+			background-color:#e4e4e4;
+			float:left;
+			margin-top:50px;
+			margin-bottom:50px;
+			margin-left:120px;
+			position:relative;
+		}
+			#news-nav	{
+				height:50px;
+				width:620px;
+				background-color:#e4e4e4;
+				border:none;
+				position:relative;
+			}
+				#news-nav-news, #news-nav-evt:hover, #news-nav-col:hover, #news-nav-tips:hover, #news-nav-campus:hover	{
+					float:left;
+					position:relative;
+					height:50px;
+					width:80px;
+					font-family:BebasNeue;
+					font-size:20px;
+					color:#181818;
+					line-height:50px;
+					text-align:center;
+					background-color:#FFFFFF;
+					border-left-color:#c7c7c7;
+					border-left-style:solid;
+					border-left-width:1px;
+					border-right-color:#c7c7c7;
+					border-right-style:solid;
+					border-right-width:1px;
+					border-top-color:#c7c7c7;
+					border-top-style:solid;
+					border-top-width:1px;
+					border-bottom-color:#FFFFFF;
+					border-bottom-style:solid;
+					border-bottom-width:1px;
+					z-index:15;
+					cursor:hand;
+					cursor:pointer;
+				}
+				#news-nav-evt, #news-nav-col, #news-nav-tips, #news-nav-campus	{
+					float:left;
+					position:relative;
+					height:50px;
+					width:80px;
+					font-family:BebasNeue;
+					font-size:20px;
+					color:#181818;
+					line-height:50px;
+					text-align:center;
+				}
+				#news-nav-tips, #news-nav-tips:hover, #news-nav-campus, #news-nav-campus:hover	{
+					width:140px;
+				}
+			#news-fill	{
+				width:618px;
+				height:448px;
+				background-color:#FFFFFF;
+				border:1px solid #c7c7c7;
+				font-family:Calibri;
+				font-size:14px;
+				font-weight:bold;
+				position:relative;
+			}
+				#news-fill-1	{
+					position:relative;
+					width:580px;
+					height:260px;
+					margin-left:19px;
+					margin-top:19px;
+					vertical-align:top;
+					line-height:20px;
+					display:inline-block;
+				}
+					#news-fill-1 p	{
+						text-align:justify;
+					}
+				#news-fill-1-more	{
+					position:relative;
+					float:right;
+					margin-right:19px;
+					color:#aaaaaa;
+					font-style:italic;
+				}
+				#news-fill-2	{
+					float:left;
+					position:relative;
+					width:580px;
+					height:120px;
+					margin-left:19px;
+					margin-top:19px;
+					vertical-align:middle;
+				}
+					#news-fill-2-thumb	{
+						float:left;
+						position:relative;
+						width:480px;
+						height:120px;
+						margin-left:25px;
+						margin-right:25px;
+						background-color:#CCC;
+					}
+					#news-thumb-left, #news-thumb-right	{
+						float:left; 
+						position:relative; 
+						top:50%; 
+						margin-top:-35px;
+						width:25px;
+						height:71px;
+					}
+					#news-thumb-left	{
+						background-image:url('images/arrow_putih.png');
+					}
+						#news-thumb-left:hover	{
+							background-image:url('images/arrow.png');
+							cursor:pointer;
+							cursor:hand;
+						}
+					#news-thumb-right	{
+						background-image:url('images/arrow_putih_r.png');
+					}
+						#news-thumb-right:hover	{
+							background-image:url('images/arrow_r.png');
+							cursor:pointer;
+							cursor:hand;
+						}
+					
+					.news-thumb	{
+						position:relative;
+						float:left;
+						width:160px;
+						height:120px;
+						background-color:#999;
+						border:0px solid #999;
+					}
+						.news-thumb-img, .news-thumb-dim	{
+							position:relative;
+							float:left;
+							width:160px;
+							height:80px;
+						}
+						.news-thumb-dim	{
+							background:url('images/news-dim.png');
+						}
+						.news-thumb-title	{
+							position:relative;
+							float:left;
+							clear:both;
+							width:156px;
+							height:36px;
+							background-color:#ec2427;
+							color:white;
+							text-align:center;
+							vertical-align:middle;
+							font-family:Calibri;
+							font-size:12px;
+							padding:2px;
+						}
+							.news-thumb-title:hover	{
+								background-color:#ad1c1f;
+							}
+						
+					
+		#content-companies	{
+			width:300px;
+			min-height:700px;
+			background-color:#e1dbdb;
+			float:right;
+			position:relative;
+			margin-right:120px;
+			margin-top:50px;		
+		}
+			#content-companies-title	{
+				font-family:"BebasNeue";
+				font-size:28px;
+				padding:10px;
+			}
+			
+			.companies	{
+				background-color:#FFFFFF;
+				width:80px;
+				height:80px;
+				position:relative;
+				float:left;
+				border:10px solid #e1dbdb;
+			}
+			.companies img	{
+				display:block;
+				width:80px;
+				position:absolute;
+				top:0;
+				bottom:0;
+				left:0;
+				right:0;
+				margin:auto;
+			}
+		
+		#content-latestjobs	{
+			width:620px;
+			height:500px;
+			background-color:#e4e4e4;
+			float:left;
+			margin-top:50px;
+			margin-left:120px;
+			position:relative;
+		}
+			#content-latestjobs-title	{
+				margin-top:20px;
+				margin-left:20px;
+				font-family:"BebasNeue";
+			}
+			#content-latestjobs-listing	{
+				width:616px;
+				height:436px;
+				background-color:#FFFFFF;
+				border:2px solid #e4e4e4;
+			}
+			#latestjobs-container	{
+				position:relative;
+				float:left;
+				left:50%;
+				margin-left:-300px;
+				top:50%;
+				margin-top:-210px;
+			}
+				#content-latestjobs-category	{
+					height:420px;
+					width:200px;
+					overflow-y:scroll;
+					overflow-x:hidden;
+					float:left;
+				}
+				.content-latestjobs-ctg	{
+					font-family:Calibri;
+					font-size:14px;
+					font-weight:bold;
+					line-height:48px;
+					min-height:48px;
+					width:178px;
+					float:left;
+					position:relative;
+					padding-left:5px;
+					border:1px solid #e1dbdb;
+				}
+				#content-latestjobs-list	{
+					height:420px;
+					width:400px;
+					overflow-y:scroll;
+					overflow-x:hidden;
+					float:left;
+				}
+					.content-latestjobs-joblist	{
+						font-family:Calibri;
+						font-size:14px;
+						font-weight:bold;
+						min-height:48px;
+						width:361px;
+						float:left;
+						position:relative;
+						padding:10px;
+						border:1px solid #e1dbdb;
+					}
+						#joblist-btn-apply	{
+							border:none;
+							border-radius:5px 5px;
+							color:white;
+							background-color:#b7161b;
+							position:absolute;
+							right:0%;
+							margin-right:10px;
+							float:right;
+						}
+						.latestjobs-joblist-title	{
+							font-size:24px;
+							font-weight:lighter;
+							padding:0px 0px 10px 0px;
+						}
+						.latestjobs-joblist-content	{
+							
+						}
+		
+		.footer	{
+			position:relative;
+			margin:0 auto;
+			clear:both;
+			width:100%;
+			min-width:1200px;
+			height:360px;
+			background-color:#ccc;
+			font-family:Calibri;
+			font-size:14px;
+			font-weight:lighter;
+			color:#FFFFFF;
+			letter-spacing:1px;
+		}
+			#footer-1	{
+				position:relative;
+				float:left;
+				width:100%;
+				min-width:1200px;
+				height:250px;
+				background-color:#ec2427;;
+			}
+				.footer-shadow	{
+					width:100%;
+					min-width:1200px;
+					height:9px;
+					position:absolute;
+					z-index:25;
+					left:0;
+				}
+				#footer-1-1	{
+					width:400px;
+					position:relative;
+					float:left;
+					margin-left:120px;
+					margin-top:30px;
+				}
+				#footer-1-2, #footer-1-3, #footer-1-4	{
+					width:200px;
+					position:relative;
+					float:left;
+					margin-top:30px;
+				}
+					#footer-1-2-title, #footer-1-3-title, #footer-1-4-title	{
+						font-weight:bold;
+						font-size:24px;
+						line-height:50px;
+					}
+				#footer-1-5	{
+					position:absolute;
+					float:right;
+					width:160px;
+					margin-top:210px;
+					right:0%;
+					margin-right:100px;
+				}
+					#footer-1-5 img	{
+						margin-left:10px;
+					}
+			#footer-2	{
+				position:relative;
+				float:left;
+				width:100%;
+				min-width:1200px;
+				height:110px;
+				background-color:#181818;
+				text-align:center;
+				letter-spacing:0px;
+				font-size:12px;
+			}
+	
+	
