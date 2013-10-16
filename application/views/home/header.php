@@ -40,14 +40,14 @@
                     <font size="+2">Masuk ke Akun Anda...</font></div>
 
                 <div id="popup_login-form">
-                    <?php echo form_open('login') ?>
+                    <?php //echo form_open('login') ?>
                     <input class="signup_form" type="text" id="txt_login_id" name="txt_login_id" placeholder="Email"/><br/>
                     <input class="signup_form" type="password" id="txt_login_pass" name="txt_login_pass" placeholder="Password"/><br/><br/>
                     <div id="popup_login-remember">
                         <input type="checkbox" id="chk_login_remember" name="chk_login_remember" value="" />Remember Me
                     </div>
                     <input id="popup_login-signupbtn" type="submit" value="LOGIN"/><br />
-                    <?php echo form_close();?>
+                    <?php //echo form_close();?>
                 </div>
 
                 <div id="login-lupapass"><a href="">Lupa Password?</a></div>

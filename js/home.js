@@ -44,6 +44,8 @@ $(window).ready(function()	{
 	);
 });
 
+
+
 //run saat tombol esc ditekan, untuk menutup semua popup
 	$(document).keyup(function(e) {
 	  if (e.keyCode == 27) { 
