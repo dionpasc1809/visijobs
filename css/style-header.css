@@ -32,6 +32,11 @@ html, body	{
 		background-color:#e4e4e4;
 		color:#003173;
 		vertical-align:middle;
+        box-shadow: 0px -2px 5px 5px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0px -2px 5px 5px rgba(0,0,0,0.3);
+        -webkit-box-shadow: 0px -2px 5px 5px rgba(0,0,0,0.3);
+        -o-box-shadow: 0px -2px 5px 5px rgba(0,0,0,0.3);
+        -ms-box-shadow: 0px -2px 5px 5px rgba(0,0,0,0.3);
 	}
 	
 	#header-menu	{
@@ -41,6 +46,58 @@ html, body	{
 		font-family:Calibri;
 		position:relative;
 	}
+    .header-menu-icons{
+        float:right;
+        position: relative;
+        height: 20px;
+        margin-left: 10px;
+        cursor:hand;
+        cursor:pointer;
+    }
+    .header-menu-icons-picked   {
+        background-color: #FFFFFF;
+        box-shadow: 0px 0px 0px 3px rgba(255,255,255,1), 0px 13px 0px 3px rgba(255,255,255,1), 0px -1px 2px 3px rgba(0,0,0,0.3), 0px 11px 3px 3px rgba(0,0,0,0.3);
+        z-index: 100;
+        border-radius:2px 2px 0px 0px;
+    }
+        .popup-header{
+            background-color: #e4e4e4;
+            border: 1px solid rgba(0,0,0,0.2);
+            border-top: none;
+            position: absolute;
+            z-index: 95;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+            padding: 5px;
+        }
+        #pm-popup   {
+            display: none;
+            width:200px;
+            min-height: 200px;
+            top:40px;
+            right:230px;
+        }
+
+        #alert-popup    {
+            display: none;
+            width:200px;
+            min-height: 200px;
+            top:40px;
+            right:200px;
+        }
+
+        #menu-popup {
+            display: none;
+            width:200px;
+            min-height: 200px;
+            top:40px;
+            right:170px;
+        }
+
+        .popup-header-active    {
+            display:block !important;
+        }
+
+
 		#btn_signup	{
 			font-family:"BebasNeue";
 			letter-spacing:1px;

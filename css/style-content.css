@@ -9,6 +9,7 @@
 		margin:0 auto;
 		background:url('images/bg.jpg') repeat;
 		color:#001d44;
+        clear:both;
 	}
 		#content-news	{
 			width:620px;

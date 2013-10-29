@@ -2,6 +2,8 @@
 	class Site extends CI_CONTROLLER	{
 		
 		function index()	{
+//            $array_items = array('password' => '', 'email' => '', 'login' => '');
+//            $this->session->unset_userdata($array_items);
 			$this->load->model('site_model','sm');
 			$data['category']['kategori']=$this->sm->getAllCategory('kategori');
 			$data['category']['lokasi']=$this->sm->getAllCategory('lokasi');
@@ -53,6 +55,24 @@
 			$this->load->view('test');
 			endif;
 		}
+
+        function profile()
+        {
+            $this->load->model('profile_model','pm');
+            $this->load->model('site_model','sm');
+            $data['category']['kategori']=$this->sm->getAllCategory('kategori');
+            $data['category']['lokasi']=$this->sm->getAllCategory('lokasi');
+            $data['category']['industri']=$this->sm->getAllCategory('industri');
+            if($this->session->userdata('login')==FALSE)
+            {
+                redirect(base_url()."site");
+            }
+            else if($this->session->userdata('login')!=FALSE)
+            {
+                $data['user']=$this->pm->getProfileInfo($this->session->userdata('email'));
+                $this->load->view('profile',$data);
+            }
+        }
 	}
 	
 ?>

@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+
+.profile    {
+    min-height: 150px;
+    width:960px;
+    margin-left: 120px;
+    position: relative;
+    padding-top: 20px;
+}
+    .profile-info   {
+        background-color: #FFFFFF;
+        position: relative;
+        float: left;
+        width:686px;
+        min-height: 400px;
+        padding: 5px;
+        border:2px solid rgba(0,0,0,0.1);
+        box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.3);
+        -o-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.3);
+        -ms-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.3);
+        -webkit-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.3);
+        font-family: Calibri;
+        color:#001d44;
+        font-size: 14px;
+    }
+    .profile-navi   {
+        background-color: #FFFFFF;
+        position: relative;
+        float: left;
+        width:206px;
+        padding: 5px;
+        min-height: 400px;
+        margin-left: 40px;
+        border:2px solid rgba(0,0,0,0.1);
+        box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.3);
+        -o-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.3);
+        -ms-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.3);
+        -webkit-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.3);
+
+    }
+    #profile-picture    {
+        border:2px solid rgba(0,0,0,0.3);
+        background-color: #FFFFFF;
+        width:160px;
+        height:200px;
+        position: relative;
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+        #profile-info-nama, #profile-info-email  {
+            position: relative;
+            font-size: 24px;
+        }

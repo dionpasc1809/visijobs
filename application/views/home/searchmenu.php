@@ -7,7 +7,7 @@
         </div>-->
         <div id="searchmenu-1">
             <div id="sm1-title">PENCARIAN LOWONGAN</div>
-            <form action="<?php echo base_url(); ?>index.php/site/search" method="">
+            <form action="<?php echo base_url(); ?>site/search" method="get">
                 <div id="sm1-search">
                     <input type="text" id="sm1-searchbar" name="keyword" placeholder="Input kata kunci disini..." />
                     <input type="hidden" name="kategori" />

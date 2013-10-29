@@ -319,7 +319,12 @@
                 for(var i=0; i<prem_page_count;i++)
                 {
                     j = i+1;
-                    $('#prem-button-thumbnail').append("<div>"+j+"</div>");
+                    var addclass = "";
+                    if(j==1)
+                    {
+                        addclass = " prem-button-picked";
+                    }
+                    $('#prem-button-thumbnail').append("<div class='prem-button-page"+addclass+"'>"+j+"</div>");
                 }
 
                 var prem_list_width	= $('.prem-list').css("width");
@@ -336,25 +341,71 @@
                 $('.prem-inner-container').css("width", width_container+'px');
 
                 var re = /px$/;
+                $('.prem-button-page').click(function(e){
+                    var prempagenum = this.innerHTML;
+                    var cur_margin = (prempagenum-1)*(-700)+"px";
+                    e.preventDefault();
+                    $('.prem-inner-container').animate({
+                        marginLeft: cur_margin
+                    }, "fast");
+                    $('.prem-button-page').each(function(){
+                        $(this).removeClass('prem-button-picked');
+                    });
+                    $(this).addClass('prem-button-picked');
+                });
                 $('.prem-list-left-thumb').click(function(e) {
-                    var container = $('.prem-inner-container');
+                    /*var container = $('.prem-inner-container');
                     var marginL = parseInt(container.css("margin-left").replace(re, ""));
                     if(marginL*(-1)>0)	{
                         e.preventDefault();
                         $('.prem-inner-container').animate({
                             marginLeft: "+=700px"
                         }, "slow");
+                    }*/
+                    var pagenow = $('.prem-button-picked').html();
+                    var pagenext = parseInt(pagenow) - 1;
+                    if(pagenow==1)
+                    {
+                        pagenext = prem_page_count;
                     }
+                    var cur_margin = (pagenext-1)*(-700)+"px";
+                    $('.prem-inner-container').animate({
+                        marginLeft: cur_margin
+                    }, "fast");
+                    $('.prem-button-page').each(function(e){
+                        $(this).removeClass('prem-button-picked');
+                        if($(this).html()==pagenext)
+                        {
+                            $(this).addClass('prem-button-picked');
+                        }
+                    });
                 });
                 $('.prem-list-right-thumb').click(function(e) {
-                    var container = $('.prem-inner-container');
+                    /*var container = $('.prem-inner-container');
                     var marginL = parseInt(container.css("margin-left").replace(re, ""));
                     if((marginL*(-1))<parseInt(container.css("width").replace(re, ""))-750)	{
                         e.preventDefault();
                         $('.prem-inner-container').animate({
                             marginLeft: "-=700px"
                         }, "slow");
+                    }*/
+                    var pagenow = $('.prem-button-picked').html();
+                    var pagenext = parseInt(pagenow)+1;
+                    if(pagenow==prem_page_count)
+                    {
+                        pagenext = 1;
                     }
+                    var cur_margin = (pagenext-1)*(-700)+"px";
+                    $('.prem-inner-container').animate({
+                        marginLeft: cur_margin
+                    }, "fast");
+                    $('.prem-button-page').each(function(e){
+                        $(this).removeClass('prem-button-picked');
+                        if($(this).html()==pagenext)
+                        {
+                            $(this).addClass('prem-button-picked');
+                        }
+                    });
                 });
             </script>
         </div>

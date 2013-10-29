@@ -18,7 +18,7 @@ class login extends CI_Controller{
             $remember = "yes";
         }
         $verify = $this->lm->verifyLogin($username,$password);
-        if($verify===true)
+        if($verify==true)
         {
             $datauser = array(
                 'email'=>$username,
@@ -28,8 +28,9 @@ class login extends CI_Controller{
             $this->session->set_userdata($datauser);
             redirect($_SERVER['HTTP_REFERER']);
         }
-        else if($verify!==false){
-
+        else if($verify==false){
+            $data['url']=$_SERVER['HTTP_REFERER'];
+            $this->load->view('loginf',$data);
         }
     }
 }

@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+.test-slider    {
+    width:800px;
+    position:relative;
+    clear: both;
+    border:1px solid #262b33;
+    float: left;
+}
+    .test   {
+        display:none;
+        width:600px;
+        border:1px solid #280b0b;
+        position: relative;
+        min-height: 300px;
+        margin:10px 100px 10px;
+        float: left;
+    }
+
+    .slide1, .slide2, .slide3, .slide4, .slide5, .slide6    {
+        width:200px;
+        background-color: #262b33;
+        margin:10px 50px 10px 50px;
+        height: 200px;
+        float: left;
+    }

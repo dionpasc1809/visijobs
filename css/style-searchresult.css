@@ -597,6 +597,9 @@
                             cursor: hand;
                             cursor: pointer;
                         }
+                            .prem-button-picked {
+                                background-color: #001d44 !important;
+                            }
 				
 				.srs-btnapply	{
 					margin-left:10px;

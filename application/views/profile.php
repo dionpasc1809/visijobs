@@ -10,22 +10,24 @@
     <link rel="stylesheet" href="<?php echo base_url();?>css/style-content.css" />
     <link rel="stylesheet" href="<?php echo base_url();?>css/style-footer.css" />
     <link rel="stylesheet" href="<?php echo base_url();?>css/fonts.css" />
+
+    <link rel="stylesheet" href="<?php echo base_url();?>css/style-profile.css" />
     <script type="text/javascript" src="<?php echo base_url(); ?>js/jquery-1.10.2.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>js/home.js"></script>
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
         $(document).ready(function(){
             $('#popup_login-signupbtn').click(function(){
                 var username = $('#txt_login_id').val();
                 var password = $('#txt_login_pass').val();
                 var login = $('#chk_login_remember').is(':checked');
-                $.post("<?php echo base_url(); ?>login",{username:username, password:password, login:login})
+                $.post("<?php /*echo base_url(); */?>login",{username:username, password:password, login:login})
                     .done(function(data){
                         alert(data);
                         location.reload();
                     });
             });
         });
-    </script>
+    </script>-->
 </head>
 
 <body>
