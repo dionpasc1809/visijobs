@@ -59,7 +59,6 @@
         ?>
         <div id="afterlogin" style="width:1200px; position:relative; margin:0 auto; height:40px;">
             <div id="header-menu">
-                <div class="header-menu-icons"><a href="<?php echo base_url(); ?>logout">Logout</a></div>
                 <div class="header-menu-icons"><input type="hidden" value="menu-popup"/><img src="<?php echo base_url(); ?>css/images/menu-icon.png"/></div>
                 <div class="header-menu-icons"><input type="hidden" value="alert-popup"/><img src="<?php echo base_url(); ?>css/images/alert-icon.png"/></div>
                 <div class="header-menu-icons"><input type="hidden" value="pm-popup"/> <img src="<?php echo base_url(); ?>css/images/pm-icon.png"/></div>
@@ -72,7 +71,8 @@
 
             </div>
             <div id="menu-popup" class="popup-header">
-
+                <div class="menu-popup-item" onclick="window.location='<?php echo base_url(); ?>site/profile';">Profile</div>
+                <div id="menu-popup-logout"><a href="<?php echo base_url(); ?>logout">Logout</a></div>
             </div>
         </div>
         <script>

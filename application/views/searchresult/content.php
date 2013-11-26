@@ -420,57 +420,8 @@
         <div class="s-n-c-part">
             <input type="text" id="pll_keyword" name="pll_keyword" placeholder="Keyword pencarian"  /></div>
         <div class="s-n-c-part"> Kategori:<br />
-            <input type="text" id="pll_kategori" name="pll_kategori" readonly="readonly" onclick="popupToggle('pll_popup_cat')" />
+            <input type="text" id="pll_kategori" name="pll_kategori" readonly="readonly" onclick="popupToggle('popup_cat',this)" />
             <div id="pll_kategori_toggle"></div>
-
-            <div id="pll_popup_cat" name="popup">
-                <div class="popup_sm-exit" onclick="popupClose('pll_popup_cat');"></div>
-                <div class="popup_sm-super">
-                    <?php foreach($category['kategori'] as $c=>$k):
-                        $supkat = $c;
-                        ?>
-                        <div class="popup_sm-super-thumb" onclick="showSub('ppl_cat-sub','<?php echo $supkat; ?>');"><?php echo $supkat; ?></div>
-                    <?php endforeach; ?>
-                    <!--
-                        <div class="popup_sm-super-thumb" onclick="showCatSub('accounting');">Accounting</div>
-                    -->
-                </div>
-                <div class="popup_sm-sub">
-                    <!-- start looping sub-ALL -->
-                    <?php foreach($category['kategori'] as $c=>$k):
-                        $supkat = $c;
-                        $sublength = count($k);
-                        $subln1 = ceil($sublength/2);
-                        $subln2 = $sublength - $subln1;
-                        ?>
-                        <div id="popup_ppl_cat-sub-<?php echo $supkat; ?>" name="ppl_cat-sub">
-                            <div class="popup_sm-sub-title"><?php echo $supkat; ?></div>
-                            <div class="popup_sm-sub-hr"></div>
-                            <div class="cat-sub-list" style="position:relative; float:left; clear:both;">
-                                <input type="checkbox" name="cat-sub-<?php echo $supkat; ?>" class="" style="float:left;" value="<?php echo "All ".$supkat; ?>" onchange="setKategori(); disableRest(this);" /><span style="float:left; width:260px;"><?php echo "All ".$supkat; ?></span>
-                            </div>
-                            <div class="popup_sm-sub-1">
-                                <?php for($x=0; $x<$subln1; $x++): ?>
-                                    <div class="cat-sub-list">
-                                        <input type="checkbox" name="cat-sub-<?php echo $supkat; ?>" class="" style="float:left;" value="<?php echo $k[$x]; ?>" onchange="setKategori()" /><span style="float:left; width:260px;"><?php echo $k[$x]; ?></span>
-                                    </div>
-                                <?php endfor;?>
-                            </div>
-                            <div class="popup_sm-sub-2">
-                                <?php for($x; $x<$sublength; $x++): ?>
-                                    <div class="cat-sub-list">
-                                        <input type="checkbox" name="cat-sub-<?php echo $supkat; ?>" class="" style="float:left;" value="<?php echo $k[$x]; ?>" onchange="setKategori()" /><span style="float:left; width:260px;"><?php echo $k[$x]; ?></span><br />
-                                    </div>
-                                <?php endfor;?>
-                            </div>
-                            <div class="popup_sm-sub-select">
-                                <input type="button" class="popup_sm-sub-selectallbtn" value="Check Semua" onclick="checkAll('cat-sub-<?php echo $supkat; ?>')"/><input type="button" class="popup_sm-sub-selectallbtn" value="Uncheck Semua" onclick="uncheckAll('cat-sub-<?php echo $supkat; ?>')"/>
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-                    <!-- end looping sub-ALL -->
-                </div>
-            </div>
         </div>
         <div class="s-n-c-part">Lokasi:<br />
             <input type="text" id="pll_lokasi" name="pll_lokasi" readonly="readonly" onclick="popupToggle('popup_loc',this)"/>

@@ -73,6 +73,44 @@
                 $this->load->view('profile',$data);
             }
         }
+
+        function editprofile()
+        {
+            $this->load->model('profile_model','pm');
+            $this->load->model('site_model','sm');
+            $data['category']['kategori']=$this->sm->getAllCategory('kategori');
+            $data['category']['lokasi']=$this->sm->getAllCategory('lokasi');
+            $data['category']['industri']=$this->sm->getAllCategory('industri');
+            if($this->session->userdata('login')==FALSE)
+            {
+                redirect(base_url()."site");
+            }
+            else if($this->session->userdata('login')!=FALSE)
+            {
+                $data['user']=$this->pm->getProfileInfo($this->session->userdata('email'));
+                $data['edittype']='editprofile';
+                $this->load->view('edit',$data);
+            }
+        }
+
+        function editexpnedu()
+        {
+            $this->load->model('profile_model','pm');
+            $this->load->model('site_model','sm');
+            $data['category']['kategori']=$this->sm->getAllCategory('kategori');
+            $data['category']['lokasi']=$this->sm->getAllCategory('lokasi');
+            $data['category']['industri']=$this->sm->getAllCategory('industri');
+            if($this->session->userdata('login')==FALSE)
+            {
+                redirect(base_url()."site");
+            }
+            else if($this->session->userdata('login')!=FALSE)
+            {
+                $data['user']=$this->pm->getProfileInfo($this->session->userdata('email'));
+                $data['edittype']='editexpnedu';
+                $this->load->view('edit',$data);
+            }
+        }
 	}
 	
 ?>

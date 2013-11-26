@@ -4,7 +4,7 @@
 .category	{
 		min-width:1200px;
 		width:100%;
-		min-height:380px;
+		/*min-height:10px;*/
 		background-color:#FFFFFF;
 		margin:0 auto;
 		clear:both;
@@ -187,3 +187,28 @@
 		right:0;
 		margin-top:62px;
 	}
+
+    #category-collapse-icon {
+        position:absolute;
+        width: 40px;
+        height:20px;
+        margin: 0 auto;
+        bottom:0;
+        right:0;
+        left:0;
+    }
+
+    .category-collapse-icon-collapsed   {
+        bottom:-22px !important;
+    }
+
+    .category-collapse-icon-collapsed-img   {
+        -webkit-transform: scaleY(1) !important;
+        filter: FlipY !important;
+    }
+
+    #category-collapse-icon img {
+        -webkit-transform: scaleY(-1);
+        filter: FlipY;
+    }
+

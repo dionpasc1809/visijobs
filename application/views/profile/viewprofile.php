@@ -53,7 +53,10 @@
                 ?>
             </div>
             <div class="profile-navi">
-
+                <div class="profile-navi-edit" onclick="window.location='<?php echo base_url(); ?>site/editprofile';">Edit Data Profil</div>
+                <div class="profile-navi-edit" onclick="window.location='<?php echo base_url(); ?>site/editexpnedu';">Edit Pendidikan & Pengalaman Kerja</div>
+                <div class="profile-navi-edit">Tambah / Edit CV</div>
+                <div class="profile-navi-edit">Edit Job Alert</div>
             </div>
         </div>
     </div>

@@ -12,7 +12,6 @@ if(!defined('BASEPATH'))
 class profile_model extends CI_Model	{
     function profile_model()	{
         parent::__construct();
-
     }
 
     function getProfileInfo($email)
@@ -21,6 +20,14 @@ class profile_model extends CI_Model	{
         $result = $this->db->query($query);
         $resultset = $result->result();
         return $resultset;
+    }
+
+    function setProfileInfo($dataprofile, $user)
+    {
+        $this->db->where('email', $user);
+        $result = $this->db->update('ms_jobseeker',$dataprofile);
+        $affrows = $this->db->affected_rows();
+        return $result."<br/>".$affrows;
     }
 }
 ?>

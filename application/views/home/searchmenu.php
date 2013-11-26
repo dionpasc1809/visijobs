@@ -23,8 +23,9 @@
                     <div class="popup_sm-super">
                         <?php foreach($category['kategori'] as $c=>$k):
                             $supkat = $c;
+                            $supkatid = substr($k[0][1],0,5);
                             ?>
-                            <div class="popup_sm-super-thumb" onclick="showCatSub('<?php echo $supkat; ?>');"><?php echo $supkat; ?></div>
+                            <div class="popup_sm-super-thumb" onclick="showCatSub('<?php echo $supkatid; ?>');"><?php echo $supkat; ?></div>
                         <?php endforeach; ?>
                         <!--
                         <div class="popup_sm-super-thumb" onclick="showCatSub('accounting');">Accounting</div>
@@ -34,32 +35,33 @@
                         <!-- start looping sub-ALL -->
                         <?php foreach($category['kategori'] as $c=>$k):
                             $supkat = $c;
+                            $supkatid = substr($k[0][1],0,5);
                             $sublength = count($k);
                             $subln1 = ceil($sublength/2);
                             $subln2 = $sublength - $subln1;
                             ?>
-                            <div id="popup_cat-sub-<?php echo $supkat; ?>" name="cat-sub">
+                            <div id="popup_cat-sub-<?php echo $supkatid; ?>" name="cat-sub">
                                 <div class="popup_sm-sub-title"><?php echo $supkat; ?></div>
                                 <div class="popup_sm-sub-hr"></div>
                                 <div class="cat-sub-list" style="position:relative; float:left; clear:both;">
-                                    <input type="checkbox" name="cat-sub-<?php echo $supkat; ?>" class="" style="float:left;" value="<?php echo "All ".$supkat; ?>" onchange="setKategori(); disableRest(this);" /><span style="float:left; width:260px;"><?php echo "All ".$supkat; ?></span>
+                                    <input type="checkbox" name="cat-sub-<?php echo $supkatid; ?>" class="" style="float:left;" value="<?php echo "All ".$supkat; ?>" onchange="setKategori(); disableRest(this);" /><span style="float:left; width:260px;"><?php echo "All ".$supkat; ?></span>
                                 </div>
                                 <div class="popup_sm-sub-1">
                                     <?php for($x=0; $x<$subln1; $x++): ?>
                                         <div class="cat-sub-list">
-                                            <input type="checkbox" name="cat-sub-<?php echo $supkat; ?>" class="" style="float:left;" value="<?php echo $k[$x]; ?>" onchange="setKategori()" /><span style="float:left; width:260px;"><?php echo $k[$x]; ?></span>
+                                            <input type="checkbox" name="cat-sub-<?php echo $supkatid; ?>" class="" style="float:left;" value="<?php echo $k[$x][0]; ?>" onchange="setKategori()" /><span style="float:left; width:260px;"><?php echo $k[$x][0]; ?></span>
                                         </div>
                                     <?php endfor;?>
                                 </div>
                                 <div class="popup_sm-sub-2">
                                     <?php for($x; $x<$sublength; $x++): ?>
                                         <div class="cat-sub-list">
-                                            <input type="checkbox" name="cat-sub-<?php echo $supkat; ?>" class="" style="float:left;" value="<?php echo $k[$x]; ?>" onchange="setKategori()" /><span style="float:left; width:260px;"><?php echo $k[$x]; ?></span><br />
+                                            <input type="checkbox" name="cat-sub-<?php echo $supkatid; ?>" class="" style="float:left;" value="<?php echo $k[$x][0]; ?>" onchange="setKategori()" /><span style="float:left; width:260px;"><?php echo $k[$x][0]; ?></span><br />
                                         </div>
                                     <?php endfor;?>
                                 </div>
                                 <div class="popup_sm-sub-select">
-                                    <input type="button" class="popup_sm-sub-selectallbtn" value="Check Semua" onclick="checkAll('cat-sub-<?php echo $supkat; ?>')"/><input type="button" class="popup_sm-sub-selectallbtn" value="Uncheck Semua" onclick="uncheckAll('cat-sub-<?php echo $supkat; ?>')"/>
+                                    <input type="button" class="popup_sm-sub-selectallbtn" value="Check Semua" onclick="checkAll('cat-sub-<?php echo $supkatid; ?>')"/><input type="button" class="popup_sm-sub-selectallbtn" value="Uncheck Semua" onclick="uncheckAll('cat-sub-<?php echo $supkatid; ?>')"/>
                                 </div>
                             </div>
                         <?php endforeach; ?>
@@ -73,47 +75,49 @@
                     <div class="popup_sm-super">
                         <?php foreach($category['lokasi'] as $c=>$k):
                             $supkat = $c;
+                            $supkatid = substr($k[0][1],0,5);
                             ?>
-                            <div class="popup_sm-super-thumb" onclick="showLocSub('<?php echo $supkat; ?>');"><?php echo $supkat; ?></div>
+                            <div class="popup_sm-super-thumb" onclick="showLocSub('<?php echo $supkatid; ?>');"><?php echo $supkat; ?></div>
                         <?php endforeach; ?>
                     </div>
                     <div class="popup_sm-sub">
                         <!-- start looping loc-sub-ALL -->
                         <?php foreach($category['lokasi'] as $c=>$k):
                             $supkat = $c;
+                            $supkatid = substr($k[0][1],0,5);
                             $sublength = count($k);
 
                             $subln1 = ceil($sublength/2);
                             $subln2 = $sublength - $subln1;
-                            if($sublength<=1 && $k[0]=="")
+                            if($sublength<=1 && $k[0][0]=="")
                             {
                                 $subln1 = 0;
                                 $subln2 = 0;
                                 $sublength = 0;
                             }
                             ?>
-                            <div id="popup_loc-sub-<?php echo $supkat; ?>" name="loc-sub">
+                            <div id="popup_loc-sub-<?php echo $supkatid; ?>" name="loc-sub">
                                 <div class="popup_sm-sub-title"><?php echo $supkat; ?></div>
                                 <div class="popup_sm-sub-hr"></div>
                                 <div class="loc-sub-list" style="position:relative; float:left; clear:both;">
-                                    <input type="checkbox" name="loc-sub-<?php echo $supkat; ?>" class="" style="float:left;" value="<?php echo "All ".$supkat; ?>" onchange="setLokasi(); disableRest(this);" /><span style="float:left; width:260px;"><?php echo "All ".$supkat; ?></span>
+                                    <input type="checkbox" name="loc-sub-<?php echo $supkatid; ?>" class="" style="float:left;" value="<?php echo "All ".$supkat; ?>" onchange="setLokasi(); disableRest(this);" /><span style="float:left; width:260px;"><?php echo "All ".$supkat; ?></span>
                                 </div>
                                 <div class="popup_sm-sub-1">
                                     <?php for($x=0; $x<$subln1; $x++): ?>
                                         <div class="loc-sub-list">
-                                            <input type="checkbox" name="loc-sub-<?php echo $supkat; ?>" class="" style="float:left;" value="<?php echo $k[$x]; ?>" onchange="setLokasi()" /><span style="float:left; width:260px;"><?php echo $k[$x]; ?></span>
+                                            <input type="checkbox" name="loc-sub-<?php echo $supkatid; ?>" class="" style="float:left;" value="<?php echo $k[$x][0]; ?>" onchange="setLokasi()" /><span style="float:left; width:260px;"><?php echo $k[$x][0]; ?></span>
                                         </div>
                                     <?php endfor;?>
                                 </div>
                                 <div class="popup_sm-sub-2">
                                     <?php for($x; $x<$sublength; $x++): ?>
                                         <div class="loc-sub-list">
-                                            <input type="checkbox" name="loc-sub-<?php echo $supkat; ?>" class="" style="float:left;" value="<?php echo $k[$x]; ?>" onchange="setLokasi()" /><span style="float:left; width:260px;"><?php echo $k[$x]; ?></span><br />
+                                            <input type="checkbox" name="loc-sub-<?php echo $supkatid; ?>" class="" style="float:left;" value="<?php echo $k[$x][0]; ?>" onchange="setLokasi()" /><span style="float:left; width:260px;"><?php echo $k[$x][0]; ?></span><br />
                                         </div>
                                     <?php endfor;?>
                                 </div>
                                 <div class="popup_sm-sub-select">
-                                    <input type="button" class="popup_sm-sub-selectallbtn" value="Check Semua" onclick="checkAll('loc-sub-<?php echo $supkat; ?>')"/><input type="button" class="popup_sm-sub-selectallbtn" value="Uncheck Semua" onclick="uncheckAll('loc-sub-<?php echo $supkat; ?>')"/>
+                                    <input type="button" class="popup_sm-sub-selectallbtn" value="Check Semua" onclick="checkAll('loc-sub-<?php echo $supkatid; ?>')"/><input type="button" class="popup_sm-sub-selectallbtn" value="Uncheck Semua" onclick="uncheckAll('loc-sub-<?php echo $supkatid; ?>')"/>
                                 </div>
                             </div>
                         <?php endforeach; ?>

@@ -56,11 +56,13 @@ html, body	{
     }
     .header-menu-icons-picked   {
         background-color: #FFFFFF;
-        box-shadow: 0px 0px 0px 3px rgba(255,255,255,1), 0px 13px 0px 3px rgba(255,255,255,1), 0px -1px 2px 3px rgba(0,0,0,0.3), 0px 11px 3px 3px rgba(0,0,0,0.3);
+        box-shadow: 0px 0px 0px 3px rgba(255,255,255,1), 0px 13px 0px 3px rgba(255,255,255,1), 0px -5px 5px 0px rgba(0,0,0,0.3), 5px -5px 5px 0px rgba(0,0,0,0.3), -5px -5px 5px 0px rgba(0,0,0,0.3), 5px 14px 5px 0px rgba(0,0,0,0.3), -5px 14px 5px 0px rgba(0,0,0,0.3);
         z-index: 100;
         border-radius:2px 2px 0px 0px;
     }
         .popup-header{
+            font-family: Calibri;
+            color:#003173;
             background-color: #e4e4e4;
             border: 1px solid rgba(0,0,0,0.2);
             border-top: none;
@@ -74,7 +76,7 @@ html, body	{
             width:200px;
             min-height: 200px;
             top:40px;
-            right:230px;
+            right:176px;
         }
 
         #alert-popup    {
@@ -82,7 +84,7 @@ html, body	{
             width:200px;
             min-height: 200px;
             top:40px;
-            right:200px;
+            right:146px;
         }
 
         #menu-popup {
@@ -90,8 +92,14 @@ html, body	{
             width:200px;
             min-height: 200px;
             top:40px;
-            right:170px;
+            right:116px;
         }
+            #menu-popup-logout  {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                padding: 5px;
+            }
 
         .popup-header-active    {
             display:block !important;
@@ -303,3 +311,13 @@ html, body	{
 			cursor:hand;
 			cursor:pointer;
 		}
+
+.menu-popup-item    {
+    height: 30px;
+    background-color: #ffffff;
+    padding: 5px;
+    line-height: 30px;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.3);
+    cursor: hand;
+    cursor: pointer;
+}

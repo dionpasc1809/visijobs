@@ -17,10 +17,11 @@ class site_model extends CI_Model	{
 		{
 			$kat = $row->kategori;
 
-			$query = $this->db->query("SELECT subkategori FROM ms_kategori WHERE kategori='$kat' AND tipe='$tipe'");
+			$query = $this->db->query("SELECT subkategori, id_kategori FROM ms_kategori WHERE kategori='$kat' AND tipe='$tipe'");
 			$sub = array();
 			foreach($query->result() as $q):
-				array_push($sub, $q->subkategori);
+                $newsub = array($q->subkategori,$q->id_kategori);
+				array_push($sub, $newsub);
 			endforeach;
 			$category += array(
 				$kat => $sub

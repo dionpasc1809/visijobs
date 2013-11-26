@@ -41,6 +41,18 @@
         -webkit-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.3);
 
     }
+        .profile-navi-edit  {
+            font-family: Calibri;
+            font-size: 16px;
+            padding: 15px 5px 15px 5px;
+            border-bottom: 1px solid rgba(0,0,0,0.3);
+            cursor: hand;
+            cursor: pointer;
+        }
+        .profile-navi-edit:hover    {
+            background-color: #003173;
+            color: #FFFFFF;
+        }
     #profile-picture    {
         border:2px solid rgba(0,0,0,0.3);
         background-color: #FFFFFF;
@@ -55,3 +67,80 @@
             position: relative;
             font-size: 24px;
         }
+
+.profile-edit{
+    float: left;
+    min-height: 150px;
+    width:940px;
+    margin-left: 120px;
+    position: relative;
+    padding: 20px;
+    margin-top: 50px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.3);
+    -o-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.3);
+    -ms-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.3);
+    font-family: Calibri;
+    color:#001d44;
+    font-size: 14px;
+}
+.profile-edit-form  {
+    position:relative;
+}
+.profile-edit-form h1   {
+    text-align: center;
+}
+.profile-edit-table {
+    left:0;
+    right:0;
+    margin:0 auto;
+}
+.profile-edit-table tr td   {
+    height: 50px;
+}
+.profile-edit-table tr td:nth-child(1)  {
+    text-align: center;
+}
+.profile-edit-table tr:nth-child(1) td:nth-child(1){
+    width:150px;
+}
+.profile-edit-table input,.profile-edit-table textarea, .profile-edit-table select, .profile-edit-span  {
+    font-family: Calibri;
+    font-size: 16px;
+    padding: 5px;
+    color: rgba(0,0,0,0.7);
+}
+
+.expnedu-edit-table {
+    left:0;
+    width: 100%;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+    .expnedu-edit-table tr td   {
+        height: 50px;
+    }
+    .expnedu-label  {
+        text-align:center;
+        font-weight: bold;
+    }
+    .expnedu-record  {
+        text-align:center;
+    }
+        .expnedu-record-tahun-min, .expnedu-record-tahun-max, .expnedu-record-nilai    {
+            width: 50px;
+        }
+        .expnedu-label td   {
+            border:1px solid rgba(0,0,0,0.3);
+        }
+        .expnedu-record td   {
+            border:1px solid rgba(0,0,0,0.1);
+        }
+    .expnedu-edit-table input,.expnedu-edit-table textarea, .expnedu-edit-table select, .expnedu-edit-span  {
+        font-family: Calibri;
+        font-size: 16px;
+        padding: 5px;
+        color: rgba(0,0,0,0.7);
+    }
