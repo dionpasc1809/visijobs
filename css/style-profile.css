@@ -113,29 +113,32 @@
     color: rgba(0,0,0,0.7);
 }
 
-.expnedu-edit-table {
+.edu-edit-table,.exp-edit-table  {
     left:0;
     width: 100%;
     border-spacing: 0px;
     border-collapse: collapse;
 }
-    .expnedu-edit-table tr td   {
+    .edu-edit-table tr td, .exp-edit-table tr td   {
         height: 50px;
     }
-    .expnedu-label  {
+    .expnedu-edu-label, .expnedu-exp-label  {
         text-align:center;
         font-weight: bold;
     }
-    .expnedu-record  {
+    .expnedu-edu-record, .expnedu-exp-record  {
         text-align:center;
     }
-        .expnedu-record-tahun-min, .expnedu-record-tahun-max, .expnedu-record-nilai    {
-            width: 50px;
+        .expnedu-record-tahun-min, .expnedu-record-tahun-max, .expnedu-record-nilai, .expnedu-record-exp-tahun-min, .expnedu-record-exp-tahun-max   {
+            width: 60px;
         }
-        .expnedu-label td   {
+        .expnedu-record-instansi, .expnedu-record-exp-perusahaan, .expnedu-record-exp-jabatan   {
+            width: 250px;
+        }
+        .expnedu-edu-label td, .expnedu-exp-label td   {
             border:1px solid rgba(0,0,0,0.3);
         }
-        .expnedu-record td   {
+        .expnedu-edu-record td, .expnedu-exp-record td   {
             border:1px solid rgba(0,0,0,0.1);
         }
     .expnedu-edit-table input,.expnedu-edit-table textarea, .expnedu-edit-table select, .expnedu-edit-span  {
@@ -144,3 +147,42 @@
         padding: 5px;
         color: rgba(0,0,0,0.7);
     }
+    .expnedu-record-delete, .expnedu-record-exp-delete  {
+        border:none;
+        background-color: red;
+        color: #ffffff;
+        border-radius: 3px 3px;
+    }
+
+    .expnedu-submit {
+        width: 100%;
+        text-align: center;
+    }
+        .expnedu-submit input   {
+            border:none;
+            background-color: #003173;
+            color: #FFFFFF;
+            padding: 5px;
+            border-radius:5px 5px;
+            font-family: Calibri;
+            font-size: 14px;
+        }
+
+.cv-edit    {
+    float: left;
+    min-height: 150px;
+    width:940px;
+    margin-left: 120px;
+    position: relative;
+    padding: 20px;
+    margin-top: 50px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.3);
+    -o-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.3);
+    -ms-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.3);
+    font-family: Calibri;
+    color:#001d44;
+    font-size: 14px;
+}

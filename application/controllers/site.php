@@ -107,9 +107,79 @@
             else if($this->session->userdata('login')!=FALSE)
             {
                 $data['user']=$this->pm->getProfileInfo($this->session->userdata('email'));
+                $checkexpnedu = $this->pm->checkExpnEdu($this->session->userdata('email'));
+                $eduis=$checkexpnedu['edu'];
+                $expis=$checkexpnedu['exp'];
+
+                    if($eduis=='TRUE')
+                    {
+                        $data['current_edu']=$this->pm->getEdu($this->session->userdata('email'));
+                    }
+                    if($expis=='TRUE')
+                    {
+                        $data['current_exp']=$this->pm->getExp($this->session->userdata('email'));
+                    }
+
                 $data['edittype']='editexpnedu';
                 $this->load->view('edit',$data);
             }
+        }
+
+        function editcv($type=NULL)
+        {
+            $this->load->model('profile_model','pm');
+            $this->load->model('site_model','sm');
+            $data['category']['kategori']=$this->sm->getAllCategory('kategori');
+            $data['category']['lokasi']=$this->sm->getAllCategory('lokasi');
+            $data['category']['industri']=$this->sm->getAllCategory('industri');
+            if($type==NULL || $type=="")
+            {
+                if($this->session->userdata('login')==FALSE)
+                {
+                    redirect(base_url()."site");
+                }
+                else if($this->session->userdata('login')!=FALSE)
+                {
+                    $data['user']=$this->pm->getProfileInfo($this->session->userdata('email'));
+                    foreach($data['user'] as $d)
+                    {
+                        $user_get = $d->id_jobseeker;
+                    }
+                    $data['cvdata'] = $this->pm->getCVdata($user_get);
+                    $data['edittype']='editcv';
+                    $this->load->view('edit',$data);
+                }
+            }
+            else if($type=="generate")
+            {
+                if($this->session->userdata('login')==FALSE)
+                {
+                    redirect(base_url()."site");
+                }
+                else if($this->session->userdata('login')!=FALSE)
+                {
+                    $data['user']=$this->pm->getProfileInfo($this->session->userdata('email'));
+
+
+                    $data['edittype']='editcv';
+                    $this->load->view('edit',$data);
+                }
+            }
+            else if($type=="upload")
+            {
+                if($this->session->userdata('login')==FALSE)
+                {
+                    redirect(base_url()."site");
+                }
+                else if($this->session->userdata('login')!=FALSE)
+                {
+                    $data['user']=$this->pm->getProfileInfo($this->session->userdata('email'));
+
+                    $data['edittype']='editcv_upload';
+                    $this->load->view('edit',$data);
+                }
+            }
+
         }
 	}
 	

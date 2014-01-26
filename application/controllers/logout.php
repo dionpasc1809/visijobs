@@ -20,6 +20,7 @@ class logout extends CI_Controller{
                 'login'=>''
             );
             $this->session->unset_userdata($datauser);
+            $this->session->sess_destroy();
             redirect(base_url()."site");
         }
     }

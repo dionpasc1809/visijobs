@@ -9,6 +9,7 @@
 
 class login extends CI_Controller{
     function index()  {
+
         $this->load->model('login_model','lm');
         $username = $_POST['txt_login_id'];
         $password = $_POST['txt_login_pass'];

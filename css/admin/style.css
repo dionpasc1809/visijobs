@@ -1,0 +1,94 @@
+.admin-container    {
+    width:1200px;
+    left: 0;
+    right:0;
+    margin:0 auto;
+    background-color: rgba(0,0,0,0.2);
+}
+.admin-header   {
+    background-color: rgba(0,41,102,0.8);
+    width: 100%;
+    height: 100px;
+    color: #FFFFFF;
+    position: relative;
+}
+#logo-img   {
+    margin-left: 10px;
+    display: inline-block;
+    line-height: 100px;
+}
+.header-right-nav   {
+    position: absolute;
+    z-index: 5;
+    bottom:5px;
+    right: 5px;
+}
+.header-top-right-nav   {
+    position: absolute;
+    z-index: 5;
+    top:5px;
+    right: 5px;
+}
+.admin-content  {
+    width: 100%;
+    min-height: 600px;
+    background-color: rgba(0,63,129,0.8);
+    position: relative;
+}
+.admin-login-form   {
+    position: relative;
+    width:300px;
+    left:0;
+    right:0;
+    margin:0 auto;
+    padding-top: 100px;
+}
+.admin-menu-nav {
+    width:300px;
+    min-height: 600px;
+    float: left;
+    background-color: rgba(171,202,244,0.3);
+    position: relative;
+}
+.menu-nav-list  {
+    width:290px;
+    padding:0px 5px 0px 5px;
+    min-height: 100px;
+}
+.menu-nav-item  {
+    position: relative;
+    width:280px;
+    padding:5px;
+    background-color: rgba(9,76,133,0.5);
+    margin-top: 10px;
+    font-size: 22px;
+    cursor: hand;
+    cursor: pointer;
+    float: left;
+}
+.menu-nav-list-2    {
+    position: relative;
+    background-color: #FFF;
+    width:290px;
+    min-height: 0px;
+    float: left;
+}
+.menu-nav-item-2    {
+    width: 280px;
+    padding: 5px;
+    background-color: rgba(0,0,102,0.8);
+    font-size: 16px;
+    border-bottom: 1px solid #FFF;
+    cursor: hand;
+    cursor: pointer;
+}
+.menu-nav-item-2:hover  {
+    color: rgba(0,0,102,0.8);
+    background-color: rgba(255,255,255,0.8);
+}
+.admin-inner-content    {
+    padding: 5px;
+    width:890px;
+    min-height: 590px;
+    float: left;
+}

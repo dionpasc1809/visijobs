@@ -14,43 +14,40 @@
     <link rel="stylesheet" href="<?php echo base_url();?>css/style-profile.css" />
     <script type="text/javascript" src="<?php echo base_url(); ?>js/jquery-1.10.2.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>js/home.js"></script>
+    <style>
+        .editprofile_success    {
+            width: 400px;
+            height: 300px;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            margin-top: 50px;
+            padding: 10px;
+            font-family: Calibri;
+            color: #001d44;
+            font-size: 16px;
+            border: 1px solid rgba(0,0,0,0.2);
+        }
+        .editprofile-s-title{
+            font-size: 28px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
 <?php /*include 'home/cover.php';*/ ?>
 <div id="container" style="z-index:10;">
-    <?php include 'home/header.php'; ?>
-
-    <div class="logo">
-        <div style="width:1200px; position:relative; margin:0 auto; height:120px;">
-            <div id="thumb-logo"></div>
-        </div>
+    <div class="editprofile_success">
+        <div class="editprofile-s-title">Data telah tersimpan</div>
+        <hr/>
+        Klik <b><a href="<?php echo $referer; ?>">disini</a></b> untuk balik ke page sebelumnya atau tunggu 3 detik untuk redirect
     </div>
-    <?php include 'home/searchmenu.php'; ?>
-
-    <?php include 'home/category.php'; ?>
-
-
-    <?php
-    if($edittype=="editprofile")
-    {
-        include 'profile/editprofile.php';
-    }
-    else if($edittype=="editexpnedu")
-    {
-        include 'profile/editexpnedu.php';
-    }
-    else if($edittype=="editcv")
-    {
-        include 'profile/editcv.php';
-    }
-    else if($edittype=="editcv_upload")
-    {
-        include 'profile/editcv_upload.php';
-    }
-     ?>
-
-    <?php include 'home/footer.php'; ?>
+    <script>
+        var URL = "<?php echo $referer; ?>";
+        var delay = 3000;
+        setTimeout(function(){ window.location = URL; }, delay);
+    </script>
 </div>
 </body>
 </html>
