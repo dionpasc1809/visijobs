@@ -23,6 +23,10 @@
     bottom:5px;
     right: 5px;
 }
+.header-right-nav a {
+    color: #FFFFFF;
+    font-style: italic;
+}
 .header-top-right-nav   {
     position: absolute;
     z-index: 5;
